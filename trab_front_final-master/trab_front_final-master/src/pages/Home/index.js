@@ -1,12 +1,9 @@
 import React from "react";
 
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo_PSYCHO_HELP.png.png";
 import { Container } from "./style.js";
 import { Link } from "react-router-dom";
-import cadu from "../../assets/icones/plus.svg";
-import cadc from "../../assets/icones/cadu.svg";
-import cads from "../../assets/icones/relatorios.svg";
-import rel from "../../assets/icones/grafico.svg";
+
 
 export default function Menu({ history }) {
   return (
@@ -16,7 +13,7 @@ export default function Menu({ history }) {
           <img src={logo} className="image" />
         </nav>
         <div className="Box">
-          <section className="se1">
+          <section>
             <Link className="lugar" to="../Cadastro">
               <div className="a">
                 <img src={cadu} className="icon" />
