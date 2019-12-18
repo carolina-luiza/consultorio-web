@@ -7,15 +7,15 @@ import { Container } from "./style.js";
 import { Link } from "react-router-dom";
 
 export default function Relatorios({ history }) {
-  const [relatorios, setRelatorios] = useState([]);
+  const [a, setA] = useState([]);
 
   useEffect(() => {
-    async function loadRelatorios() {
-      const response = await api.get("/service");
-      setRelatorios(response.data);
+    async function loada() {
+      const response = await api.get("/atendimento");
+      setA(response.data);
     }
-    loadRelatorios();
-  }, [relatorios]);
+    loada();
+  }, [a]);
 
   return (
     <Container>
