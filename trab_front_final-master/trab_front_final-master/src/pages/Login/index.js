@@ -22,11 +22,11 @@ export default function Login({ history }) {
         localStorage.setItem("@CESTA/token", token, userData);
       }
       history.push("/Home");
-    } catch (err) {
-      console.log("response", err);
+    } catch (erro) {
+      console.log("response", erro);
     }
   }
-  //check box onChange={event => setAdmin(isAdmin)}
+
   return (
     <Container>
       <section>
