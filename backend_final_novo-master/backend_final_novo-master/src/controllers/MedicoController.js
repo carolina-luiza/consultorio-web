@@ -10,17 +10,5 @@ module.exports = {
     async list(req, res) {
         const medico = await Medico.find({});
         return res.json(medico);
-    },
-    async index(req, res) {
-        const medico = await Medico.findOne({ cpf: req.params.cpf });
-        return res.json(medico);
-    },
-    async update(req, res) {
-        const medico = await Medico.findByIdAndUpdate(req.params.id, req.body, { new: true });
-        return res.json(medico);
-    },
-    async destroy(req, res) {
-        await medico.deleteOne({ _id: req.params.id });
-        return res.json({ message: "Exclusão realizada com sucesso!" });
     }
 };
