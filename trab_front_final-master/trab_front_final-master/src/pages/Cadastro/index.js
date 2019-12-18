@@ -4,7 +4,7 @@ import api from "../../services/api";
 
 import { Container } from "./style.js";
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo_PSYCHO_HELP.png";
 export default function Cadastro({ history }) {
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
@@ -21,14 +21,14 @@ export default function Cadastro({ history }) {
       history.push("/Home");
       alert("Cadastrado com sucesso");
     } catch (err) {
-      alert("O e-mail já existe");
+      alert("e-mail existente");
     }
   }
 
   return (
     <Container>
       <div className="Cadastrar_Medico MatcSreen">
-        <nav className="Box_1">
+        <nav>
           <img src={logo} className="image" />
           <Link className="link" to="../Home">
             Voltar{" "}
