@@ -19,5 +19,4 @@ routes.get("/medico", MedicoController.list);
 routes.post("/atendimento", AtendimentoController.store);
 
 routes.get("/usuario", UserController.list);
-routes.get("teste", (req, res) => res.json({ ok: true }));
 module.exports = routes;
