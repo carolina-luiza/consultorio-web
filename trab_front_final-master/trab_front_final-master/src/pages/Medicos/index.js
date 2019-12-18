@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import api from "../../services/api";
 
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo_PSYCHO_HELP.png";
 import { Container } from "./style.js";
 import { Link } from "react-router-dom";
 export default function Cadastro({ history }) {
@@ -23,9 +23,7 @@ export default function Cadastro({ history }) {
         dia,
       });
       history.push("/Home");
-      alert("Cadastrado com sucesso");
     } catch (err) {
-      alert("O CPF informado já foi cadastrado");
     }
   }
 
