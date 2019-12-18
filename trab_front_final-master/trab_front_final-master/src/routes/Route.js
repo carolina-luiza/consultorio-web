@@ -15,13 +15,6 @@ export default function RouterWeapper({
   if (isAuthenticated() && !isPrivate) {
     return <Redirect to="/Home" />;
   }
-
-  if (!signed && isPrivate) {
-    return <Redirect to="/" />;
-  }
-  if (signed && !isPrivate) {
-    return <Redirect to="/Home" />;
-  }
   if (isTokenExpired()) {
     logout();
     return <Redirect to="/" />;
