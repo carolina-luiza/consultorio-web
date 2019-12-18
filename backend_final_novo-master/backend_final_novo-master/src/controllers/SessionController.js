@@ -6,7 +6,7 @@ module.exports = {
         const user = await Usuario.findOne({ email }).select("+password");
 
         if (!user) {
-            return res.status(400).json({ error: "Usuario não encontrado" });
+            return res.status(400).json({ error: "Usuario não existe" });
         }
         if (!(await user.compareHash(password))) {
             return res.status(400).json({ error: "Senha invalida" });
