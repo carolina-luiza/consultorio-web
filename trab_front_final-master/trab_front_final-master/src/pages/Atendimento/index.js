@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 import api from "../../services/api";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo_PSYCHO_HELP.png";
 import { Container } from "./style.js";
 import { Link } from "react-router-dom";
 
@@ -37,19 +37,19 @@ export default function Servico({ history }) {
       alert("Cadastrado com sucesso");
     } 
     catch (err) {
-      alert("O CPF informado já foi cadastrado");
+      alert("O CPF já foi cadastrado");
     }
   }
   return (
     <Container>
-      <div className="Cadastrar_Medico MatcSreen">
-        <nav className="Box_1">
+      <div>
+        <nav>
           <img src={logo} className="image" />
           <Link className="link" to="../Home">
             Voltar{" "}
           </Link>
         </nav>
-        <div className="Box">
+        <div>
           <section>
             <h1>Cadastrar Atendimento</h1>
             <form onSubmit={handleSubmit}>
